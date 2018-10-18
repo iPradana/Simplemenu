@@ -1,6 +1,7 @@
 package com.team67.simplemenu;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
+
     public void btnmenu1(View view){
         Intent i = new Intent(this, Main2Activity.class);
         startActivity(i);
@@ -31,5 +39,10 @@ public class MainActivity extends AppCompatActivity {
         m = btnM.getText().toString();
         i.putExtra("menu",m);
         startActivity(i);
+    }
+
+    public void btnColor(View view){
+        btnM = (Button) findViewById(view.getId());
+        btnM.setBackgroundColor(Color.CYAN);
     }
 }

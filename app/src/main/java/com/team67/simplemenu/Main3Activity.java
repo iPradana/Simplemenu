@@ -1,7 +1,9 @@
 package com.team67.simplemenu;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class Main3Activity extends AppCompatActivity {
 
